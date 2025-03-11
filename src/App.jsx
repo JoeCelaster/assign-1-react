@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import './App.css'
+
 
 function App() {
   const books = [
@@ -34,7 +36,17 @@ function App() {
     },
   ];
 
-  return <>{/* write code to display all the books using */}</>;
+  return <div className='joe'>{books.map((item,i)=>{
+                  return(
+                      <div key={i} className='rend'>
+                        <p >{item.id}</p>
+                        <img src={item.image}/>
+                        <p >{item.name}</p>
+                        <p >{item.genre}</p>
+                        <p >{item.author}</p>
+                      </div>
+                  )
+              })}</div>;
 }
 
 export default App;
